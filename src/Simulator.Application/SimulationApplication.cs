@@ -89,20 +89,5 @@ namespace Simulator.Application
                 .UseInMemoryReadStoreFor<PatientReadModel>()
                 .UseInMemoryReadStoreFor<ConsultationReadModel>();
         }
-
-
-        //public static IEventFlowOptions UseFileSystemStoreFor<TReadModel>(IEventFlowOptions eventFlowOptions)
-        //    where TReadModel: class, IReadModel, new()
-        //{
-        //    return eventFlowOptions
-        //        .RegisterServices(f =>
-        //        {
-        //            f.Register<ISearchableReadModelStore<TReadModel>, LiteDbReadModelStore<TReadModel>>();
-        //            f.Register<IReadModelStore<TReadModel>>(r =>
-        //                r.Resolver
-        //                 .Resolve<ISearchableReadModelStore<TReadModel>>());
-        //        })
-        //        .UseReadStoreFor<ISearchableReadModelStore<TReadModel>, TReadModel>();
-        //}
     }
 }
